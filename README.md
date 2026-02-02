@@ -16,7 +16,7 @@ UI から直感的にパラメータを調整して出力できます（※UI実
 * Recommended: OS Windows
 <br>
 
-1. Repository Cloning and Dependency Installation
+Repository Cloning and Dependency Installation
 
 ```bash
 git clone https://github.com/Ukerneraies/audio-effect-processor.git
@@ -26,11 +26,16 @@ conda activate audio_effect
 pip install -r requirements.txt
 ```
 
-2. Inference：
+1. Using the UI：
+Startup command
 ```bash
-python3 scripts/sample.py "一张瓢虫的照片，微距，变焦，高质量，电影，拿着一个牌子，写着“可图”"
-# The image will be saved to "scripts/outputs/sample_text.jpg"
+streamlit run app.py
 ```
+WAVファイルをアップロードする
+
+Pitch / Tempo / Echo を調整する
+
+加工後の音声を出力する（保存/ダウンロード）
 4. Web demo：
 ```bash
 python3 scripts/sampleui.py
