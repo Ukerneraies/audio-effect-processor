@@ -189,21 +189,12 @@ We open-source Kolors to promote the development of large text-to-image models i
 If you find our work helpful, please cite it!
 
 ```
-@article{kolors,
-  title={Kolors: Effective Training of Diffusion Model for Photorealistic Text-to-Image Synthesis},
-  author={Kolors Team},
-  journal={arXiv preprint},
-  year={2024}
+@article{Ukerneraies,
+  title={audio-effect-processor},
+  author={Ukerneraies},
+  year={2026}
 }
 ```
 
-### Acknowledgments
-- Thanks to [Diffusers](https://github.com/huggingface/diffusers) for providing the codebase.
-- Thanks to [ChatGLM3](https://github.com/THUDM/ChatGLM3) for providing the powerful Chinese language model.
-<br>
 
-### Contact Us
 
-If you want to leave a message for our R&D team and product team, feel free to join our [WeChat group](https://github.com/Kwai-Kolors/Kolors/blob/master/imgs/wechat.png). You can also contact us via email (kwai-kolors@kuaishou.com).
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Kwai-Kolors/Kolors&type=Date)](https://star-history.com/#Kwai-Kolors/Kolors&Date)
