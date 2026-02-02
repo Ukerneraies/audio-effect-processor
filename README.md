@@ -19,23 +19,14 @@ UI から直感的にパラメータを調整して出力できます（※UI実
 1. Repository Cloning and Dependency Installation
 
 ```bash
-apt-get install git-lfs
 git clone https://github.com/Ukerneraies/audio-effect-processor.git
 cd audio-effect-processor
 conda create --name audio_effect python=3.8
 conda activate audio_effect
 pip install -r requirements.txt
-python3 setup.py install
 ```
-2. Weights download（[link](https://huggingface.co/Kwai-Kolors/Kolors)）：
-```bash
-huggingface-cli download --resume-download Kwai-Kolors/Kolors --local-dir weights/Kolors
-```
-or
-```bash
-git lfs clone https://huggingface.co/Kwai-Kolors/Kolors weights/Kolors
-```
-3. Inference：
+
+2. Inference：
 ```bash
 python3 scripts/sample.py "一张瓢虫的照片，微距，变焦，高质量，电影，拿着一个牌子，写着“可图”"
 # The image will be saved to "scripts/outputs/sample_text.jpg"
