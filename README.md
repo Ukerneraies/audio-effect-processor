@@ -19,10 +19,8 @@ UI から直感的にパラメータを調整して出力できます（※UI実
 
 ## デモ（スクリーンショット）
 
-UI の画面などがあれば `assets/` に置いてここに貼れます。
-
-例：
-- `assets/ui.png`
+- `<img width="781" height="865" alt="image" src="https://github.com/user-attachments/assets/d454d5c6-9aaa-496c-8acf-ba3e8347ce2a" />
+`
 
 ---
 
