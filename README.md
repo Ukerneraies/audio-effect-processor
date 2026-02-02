@@ -1,7 +1,7 @@
 
 # audio-effect-processor
-WAV 音声ファイルに対して、音程変更（Pitch）、テンポ変更（Tempo）、エコー（Echo）などの加工を行い、加工後の音声を書き出すツールです。  
-UI から直感的にパラメータを調整して出力できます（※UI実装がある場合）。
+This tool processes WAV audio files, changing their pitch, tempo, echo, etc., and exports the processed audio.
+You can intuitively adjust parameters from the UI and output the audio (if the UI is implemented).
 
 ## Contents
 - [🛠️ Usage](#Usage)
