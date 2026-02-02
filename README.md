@@ -30,9 +30,9 @@ Startup command
 ```bash
 streamlit run Scripts/app.py
 ```
-1.Upload a WAV file
-2.Adjust the pitch, tempo, and echo
-3.Output the processed audio (save/download)
+1.Upload a WAV file.
+2.Adjust the pitch, tempo, and echo.
+3.Output the processed audio (save/download).
 
 ### Using the CLI：
 Pitch
@@ -59,6 +59,8 @@ Despite best efforts to improve quality and reliability, **we do not guarantee**
 Audio processing may cause artifacts (noise/distortion), unexpected changes in loudness, or degradation depending on parameters and input conditions.
 
 The authors and contributors do not assume any legal responsibility for any damages, data loss, security issues, public opinion risks, or liabilities arising from the use, misuse, abuse, or improper utilization of this project.
+
+This project may include code generated or assisted by AI tools (including ChatGPT); users are responsible for validating outputs and results.
 
 ### Citation
 If you find our work helpful, please cite it!
