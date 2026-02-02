@@ -4,143 +4,8 @@ WAV 音声ファイルに対して、音程変更（Pitch）、テンポ変更�
 UI から直感的にパラメータを調整して出力できます（※UI実装がある場合）。
 
 ## Contents
-
-- [🎉 News](#News)
-- [📑 Open-source Plan](#open-source-plan)
-- [📖 Introduction](#Introduction)
-- [📊 Evaluation 🥇🥇🔥🔥](#Evaluation)
-- [🎥 Visualization](#Visualization)
 - [🛠️ Usage](#Usage)
 - [📜 License & Citation & Acknowledgments](#License)
-<br><br>
-
-
-## <a name="News"></a>🎉 News
-* 2024.11.13 🔥 [Kolors-Portrait-with-Flux](https://huggingface.co/spaces/Kwai-Kolors/Kolors-Portrait-with-Flux) and [Kolors-Character-With-Flux](https://huggingface.co/spaces/Kwai-Kolors/Kolors-Character-With-Flux), which enable to preserve identity, are available on HuggingFace Space for free trials! Hope you enjoy it!
-* 2024.09.01 🔥 Kolors-Virtual-Try-On, a virtual try-on demo based on Kolors is released! Enjoy trying on [Kolors-Virtual-Try-On](https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On), [WeChat post](https://mp.weixin.qq.com/s/Wk_Eq7OAywlrPqNC6zWZJQ).
-
-* 2024.08.06 🔥 Pose ControlNet is released! Please check [ControlNet(Pose)](./controlnet/) for more details.
-
-* 2024.08.01 🔥 The Kolors-Dreambooth-LoRA training and inference code is released! Please check [Dreambooth-LoRA](./dreambooth/) for more details.
-  
-* 2024.07.31 🔥 The Kolors-IP-Adapter-FaceID-Plus weights and inference code is released! Please check [IP-Adapter-FaceID-Plus](./ipadapter_FaceID/) for more details.
-
-* 2024.07.26 🔥 ControlNet and Inpainting Model are released! Please check [ControlNet(Canny, Depth)](./controlnet/) and [Inpainting Model](./inpainting/) for more details.
-
-
-* 2024.07.17 🔥 The Kolors-IP-Adapter-Plus weights and infernce code is released! Please check [IP-Adapter-Plus](./ipadapter/) for more details.
-
-* 2024.07.12 🤗 Kolors is now available in **Diffusers**! Please check [kolors-diffusers](https://huggingface.co/Kwai-Kolors/Kolors-diffusers) or the [example](#using-with-diffusers) below for detail! Thanks to the Diffusers team for their technical support.
-* 2024.07.10 🤖 Kolors supports [ModelScope](https://modelscope.cn/models/Kwai-Kolors/Kolors).
-* 2024.07.09 💥 Kolors supports [ComfyUI](https://github.com/comfyanonymous/ComfyUI#manual-install-windows-linux). Thanks to [@kijai](https://github.com/kijai/ComfyUI-KwaiKolorsWrapper) with his great work.
-* 2024.07.06 🔥🔥🔥 We release **Kolors**, a large text-to-image model trained on billions of text-image pairs. This model is bilingual in both Chinese and English, and supports a context length of 256 tokens. For more technical details, please refer to [technical report](https://github.com/Kwai-Kolors/Kolors/blob/master/imgs/Kolors_paper.pdf).
-* 2024.07.03 📊 Kolors won the second place on [FlagEval Multimodal Text-to-Image Leaderboard](https://flageval.baai.ac.cn/#/leaderboard/multimodal?kind=t2i), excelling particularly in the Chinese and English subjective quality assessment where Kolors took the first place.
-* 2024.07.02 🎉 Congratulations! Our paper on controllable video generation, [DragAnything: Motion Control for Anything using Entity Representation](https://arxiv.org/abs/2403.07420), have been accepted by ECCV 2024.
-* 2024.02.08 🎉 Congratulations! Our paper on generative model evaluation, [Learning Multi-dimensional Human Preference for Text-to-Image Generation](https://wangbohan97.github.io/MPS/), have been accepted by CVPR 2024.
-<br><br>
-
-## <a name="open-source-plan"></a>📑 Open-source Plan
-
-- Kolors (Text-to-Image Model)
-  - [x] Inference 
-  - [x] Checkpoints 
-  - [x] IP-Adapter
-  - [x] ControlNet (Canny, Depth)
-  - [x] Inpainting
-  - [x] IP-Adapter-FaceID
-  - [x] LoRA
-  - [x] ControlNet (Pose)
-- [x] ComfyUI
-- [x] Gradio
-- [x] Diffusers
-<br><br>
-
-## 
-## <a name="Introduction"></a>📖 Introduction
-
-Kolors is a large-scale text-to-image generation model based on latent diffusion, developed by the Kuaishou Kolors team. Trained on billions of text-image pairs, Kolors exhibits significant advantages over both open-source and closed-source models in visual quality, complex semantic accuracy, and text rendering for both Chinese and English characters. Furthermore, Kolors supports both Chinese and English inputs, demonstrating strong performance in understanding and generating Chinese-specific content. For more details, please refer to this <a href="https://github.com/Kwai-Kolors/Kolors/blob/master/imgs/Kolors_paper.pdf">technical report</a></b>.
-<br><br>
-
-## <a name="Evaluation"></a>📊 Evaluation
-We have collected a comprehensive text-to-image evaluation dataset named KolorsPrompts to compare Kolors with other state-of-the-art open models and closed-source models. KolorsPrompts includes over 1,000 prompts across 14 catagories and 12 evaluation dimensions. The evaluation process incorporates both human and machine assessments. In relevant benchmark evaluations, Kolors demonstrated highly competitive performance, achieving industry-leading standards.
-
-<br><br>
-
-### Human Assessment
-
-For the human evaluation, we invited 50 imagery experts to conduct comparative evaluations of the results generated by different models. The experts rated the generated images based on three criteria: visual appeal, text faithfulness, and overall satisfaction. In the evaluation, Kolors achieved the highest overall satisfaction score and significantly led in visual appeal compared to other models.
-
-|       Model       | Average Overall Satisfaction | Average Visual Appeal | Average Text Faithfulness |
-| :--------------: | :--------: | :--------: | :--------: |
-|  Adobe-Firefly   |    3.03    |    3.46    |    3.84    |
-| Stable Diffusion 3 |    3.26    |    3.50    |    4.20    |
-|     DALL-E 3      |    3.32    |    3.54    |    4.22    |
-|  Midjourney-v5   |    3.32    |    3.68    |    4.02    |
-| Playground-v2.5  |    3.37    |    3.73    |    4.04    |
-|  Midjourney-v6   |    3.58    |    3.92    |    4.18    |
-|    **Kolors**    |    **3.59**    |    **3.99**    |    **4.17**    |
-
-------
-
-<div style="color: gray; font-size: small;">
-
-**All model results are tested with the April 2024 product versions**
-
-</div>
-<br>
-
-### Machine Assessment
-We used [MPS](https://arxiv.org/abs/2405.14705) (Multi-dimensional Human Preference Score) on KolorsPrompts as the evaluation metric for machine assessment. Kolors achieved the highest MPS score, which is consistent with the results of the human evaluations.
-
-<div style="text-align:center">
-
-| Models            | Overall MPS |
-|:-------------------:|:-------------:|
-| Adobe-Firefly     | 8.5     |
-| Stable Diffusion 3  | 8.9      |
-| DALL-E 3           |   9.0    |
-| Midjourney-v5     | 9.4      |
-| Playground-v2.5   | 9.8      |
-| Midjourney-v6     | 10.2      |
-| **Kolors**        | **10.3**      |
-</div>
-
-
-<br>
-
-For more experimental results and details, please refer to our [technical report](https://github.com/Kwai-Kolors/Kolors/blob/master/imgs/Kolors_paper.pdf).
-
-<br><br>
-
-
-## <a name="Visualization"></a>🎥 Visualization
-
-* **High-quality Portrait**
-<div style="display: flex; justify-content: space-between;">
-  <img src="imgs/zl8.png" />
-</div>
-<br>
-
-* **Chinese Elements Generation**
-<div style="display: flex; justify-content: space-between;">
-  <img src="imgs/cn_all.png"/>
-</div>
-<br>
-
-* **Complex Semantic Understanding**
-<div style="display: flex; justify-content: space-between;">
-  <img src="imgs/fz_all.png"/>
-</div>
-<br>
-
-* **Text Rendering**
-<div style="display: flex; justify-content: space-between;">
-  <img src="imgs/wz_all.png" />
-</div>
-<br>
-</div>
-
-The visualized case prompts mentioned above can be accessed [here](https://github.com/Kwai-Kolors/Kolors/blob/master/imgs/prompt_vis.txt). 
 <br><br>
 
 ## <a name="Usage"></a>🛠️ Usage
@@ -148,19 +13,17 @@ The visualized case prompts mentioned above can be accessed [here](https://githu
 ### Requirements
 
 * Python 3.8 or later
-* PyTorch 1.13.1 or later
-* Transformers 4.26.1 or later
-* Recommended: CUDA 11.7 or later
+* Recommended: OS Windows
 <br>
 
 1. Repository Cloning and Dependency Installation
 
 ```bash
 apt-get install git-lfs
-git clone https://github.com/Kwai-Kolors/Kolors
-cd Kolors
-conda create --name kolors python=3.8
-conda activate kolors
+git clone https://github.com/Ukerneraies/audio-effect-processor.git
+cd audio-effect-processor
+conda create --name audio_effect python=3.8
+conda activate audio_effect
 pip install -r requirements.txt
 python3 setup.py install
 ```
