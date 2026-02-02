@@ -1,31 +1,7 @@
-<p align="left">
-    English</a>&nbsp ｜ &nbsp<a href="README_CN.md">中文</a>&nbsp
-</p>
-<br><br>
 
-<p align="center">
-    <img src="imgs/logo.png" width="400"/>
-<p>
-<br>
-
-
-<div align="center">
-  <a href='https://huggingface.co/Kwai-Kolors/Kolors'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-HF-yellow'></a> &ensp;
-  <a href="https://github.com/Kwai-Kolors/Kolors"><img src="https://img.shields.io/static/v1?label=Kolors Code&message=Github&color=blue&logo=github-pages"></a> &ensp;
-  <a href="https://kwai-kolors.github.io/"><img src="https://img.shields.io/static/v1?label=Team%20Page&message=Page&color=green"></a> &ensp;
-
-<a href='https://huggingface.co/spaces/Kwai-Kolors/Kolors '><img src='https://img.shields.io/badge/%F0%9F%A4%97%20HF Space-HF-yellow'></a> &ensp;
-  <a href="https://github.com/Kwai-Kolors/Kolors/blob/master/imgs/Kolors_paper.pdf"><img src="https://img.shields.io/static/v1?label=Tech Report&message=Arxiv:Kolors&color=red&logo=arxiv"></a> &ensp;
-  <a href="https://kolors.kuaishou.com/"><img src="https://img.shields.io/static/v1?label=Official Website&message=Page&color=green"></a> &ensp;
-</div>
-
-
-
-# Kolors: Effective Training of Diffusion Model for Photorealistic Text-to-Image Synthesis
-<figure>
-  <img src="imgs/head_final3.png">
-</figure>
-<br><br>
+# audio-effect-processor
+WAV 音声ファイルに対して、音程変更（Pitch）、テンポ変更（Tempo）、エコー（Echo）などの加工を行い、加工後の音声を書き出すツールです。  
+UI から直感的にパラメータを調整して出力できます（※UI実装がある場合）。
 
 ## Contents
 
