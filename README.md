@@ -19,7 +19,7 @@ UI から直感的にパラメータを調整して出力できます（※UI実
 ### Repository Cloning and Dependency Installation
 
 ```bash
-git clone https://github.com/Ukerneraies/audio-effect-processor.git
+git clone https://github.com/Ukerneraies/audio-effect-processor
 cd audio-effect-processor
 conda create --name audio_effect python=3.8
 conda activate audio_effect
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 ### Using the UI：
 Startup command
 ```bash
-streamlit run app.py
+streamlit run Scripts/app.py
 ```
 1.Upload a WAV file
 2.Adjust the pitch, tempo, and echo
