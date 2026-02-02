@@ -37,15 +37,15 @@ streamlit run Scripts/app.py
 ### Using the CLI：
 Pitch
 ```bash
-python Scripts/pitch_shift.py --in input.wav --out output_pitch.wav --amount 0.0
+python Scripts/process_one.py input.wav out_pitchup.wav --pitch 5
 ```
 Tempo
 ```bash
-python Scripts/time_stretch.py --in input.wav --out output_tempo.wav --amount 0.0
+python Scripts/process_one.py input.wav out_slow.wav --tempo 1.2
 ```
 Echo
 ```bash
-python Scripts/echo.py --in input.wav --out output_echo.wav --amount 0.0
+python Scripts/process_one.py input.wav out_echo.wav --echo --delay 0.22 --decay 0.30
 
 ```
 <br><br>
