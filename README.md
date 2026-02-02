@@ -16,7 +16,7 @@ UI から直感的にパラメータを調整して出力できます（※UI実
 * Recommended: OS Windows
 <br>
 
-Repository Cloning and Dependency Installation
+### Repository Cloning and Dependency Installation
 
 ```bash
 git clone https://github.com/Ukerneraies/audio-effect-processor.git
@@ -25,22 +25,29 @@ conda create --name audio_effect python=3.8
 conda activate audio_effect
 pip install -r requirements.txt
 ```
-
-1. Using the UI：
+### Using the UI：
 Startup command
 ```bash
 streamlit run app.py
 ```
-WAVファイルをアップロードする
+1.Upload a WAV file
+2.Adjust the pitch, tempo, and echo
+3.Output the processed audio (save/download)
 
-Pitch / Tempo / Echo を調整する
-
-加工後の音声を出力する（保存/ダウンロード）
-4. Web demo：
+### Using the CLI：
+Pitch
 ```bash
-python3 scripts/sampleui.py
+python Scripts/pitch_shift.py --in input.wav --out output_pitch.wav --amount 0.0
 ```
+Tempo
+```bash
+python Scripts/time_stretch.py --in input.wav --out output_tempo.wav --amount 0.0
+```
+Echo
+```bash
+python Scripts/echo.py --in input.wav --out output_echo.wav --amount 0.0
 
+```
 ### Using with Diffusers
 Make sure you upgrade to the latest version(0.30.0.dev0) of diffusers: 
 ```
