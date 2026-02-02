@@ -5,7 +5,7 @@ UI から直感的にパラメータを調整して出力できます（※UI実
 
 ## Contents
 - [🛠️ Usage](#Usage)
-
+- [📜 License & Citation & Acknowledgments](#License)
 <br><br>
 
 ## <a name="Usage"></a>🛠️ Usage
@@ -48,7 +48,17 @@ Echo
 python Scripts/echo.py --in input.wav --out output_echo.wav --amount 0.0
 
 ```
+<br><br>
+## <a name="License"></a>📜 License & Disclaimer & Citation
 
+### Disclaimer
+
+This project is provided **"AS IS"**, without warranty of any kind.
+
+Despite best efforts to improve quality and reliability, **we do not guarantee** the accuracy, performance, or suitability of the output audio.  
+Audio processing may cause artifacts (noise/distortion), unexpected changes in loudness, or degradation depending on parameters and input conditions.
+
+The authors and contributors do not assume any legal responsibility for any damages, data loss, security issues, public opinion risks, or liabilities arising from the use, misuse, abuse, or improper utilization of this project.
 
 ### Citation
 If you find our work helpful, please cite it!
